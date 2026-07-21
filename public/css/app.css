@@ -605,7 +605,7 @@ body {
 /* ─── JADWAL GRID ───────────────────────────────────── */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -783,14 +783,13 @@ body {
 }
 
 @media (max-width: 900px) {
-    .sidebar { transform: translateX(-100%); }
-    .sidebar.open { transform: translateX(0); }
-    .main-wrapper { margin-left: 0; }
-    .grid-container { grid-template-columns: repeat(3, 1fr); }
+    .grid-container { 
+        grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    }
 }
 
 @media (max-width: 600px) {
-    .stat-grid { grid-template-columns: 1fr 1fr; }
-    .grid-container { grid-template-columns: repeat(2, 1fr); }
-    .main-content { padding: 1rem; }
+    .grid-container { 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
 }

@@ -13,7 +13,7 @@ use Illuminate\Validation\ValidationException;
 
 class JadwalController extends Controller
 {
-    private array $hariList = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    private array $hariList = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'];
 
     public function index(Request $request)
     {

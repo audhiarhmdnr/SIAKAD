@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mini SIAKAD – Sistem Informasi Jadwal Kuliah Kalla Institute">
-    <title>@yield('title', 'Dashboard') — Mini SIAKAD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -15,19 +14,14 @@
 
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
-            <a href="{{ route('dashboard') }}" class="logo-wrapper">
+            <a href="{{ route('jadwal.grid') }}" class="logo-wrapper">
                 <img src="{{ asset('images/logo.png') }}" alt="Logo" class="sidebar-logo">
             </a>
         </div>
 
         <nav class="sidebar-nav">
             <div class="nav-section-label">Main</div>
-            <a href="{{ route('dashboard') }}" class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                <span class="nav-icon">
-                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-                </span>
-                <span class="nav-label">Dashboard</span>
-            </a>
+            
             <a href="{{ route('jadwal.grid') }}" class="nav-item {{ request()->routeIs('jadwal.grid') ? 'active' : '' }}">
                 <span class="nav-icon">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -78,7 +72,6 @@
             <button class="topbar-toggle" id="sidebarToggle">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
-            <div class="topbar-title">@yield('page-title', 'Dashboard')</div>
             <div class="topbar-right">
                 <div class="topbar-time" id="topbarTime"></div>
                 <div class="topbar-badge">

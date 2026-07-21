@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/', function () {
+    return redirect()->route('jadwal.grid');
+});
 
 Route::resource('dosen', DosenController::class)->except(['show']);
 Route::resource('mata-kuliah', MataKuliahController::class)->except(['show']);
