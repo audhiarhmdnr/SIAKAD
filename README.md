@@ -254,23 +254,3 @@ SIAKAD/
 └── package.json
 ```
 
----
-
-## 📊 Kriteria Penilaian
-
-| Aspek | Bobot | Implementasi |
-|---|---|---|
-| **Fungsional** | 40 | CRUD lengkap 5 entitas (Dosen, MataKuliah, Ruangan, Jadwal, Prodi) |
-| **Validasi** | 20 | Bentrok ruangan & dosen via `cekBentrok()`, validasi form tiap controller |
-| **Kualitas Kode** | 20 | Arsitektur MVC, Eloquent ORM, Resource Controller, PSR-4 autoload |
-| **UI/UX** | 10 | Grid mingguan, filter multi-kriteria (kelas/semester/prodi), sidebar navigasi, responsive |
-| **Dokumentasi** | 10 | README ini |
-| **Bonus** | +5 | Export CSV jadwal dengan filter aktif |
-
----
-
-## 👤 Informasi Proyek
-
-- **Institusi:** Kalla Institute
-- **Dibuat dengan:** Laravel 13 + Blade + Vanilla CSS
-- **Lisensi:** MIT
